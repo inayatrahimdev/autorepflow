@@ -101,6 +101,10 @@
       font-size: 16px;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: var(--bg);
@@ -533,6 +537,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 0;
+      overflow: hidden;
     }
 
     .hero-bg canvas {
@@ -2424,53 +2429,97 @@
        RESPONSIVE — 1280px (large laptops)
     ============================================================ */
     @media (max-width: 1280px) {
+
       .container,
       .container-wide {
         padding: 0 32px;
       }
-      .techstack-cats { gap: 28px; }
+
+      .techstack-cats {
+        gap: 28px;
+      }
     }
 
     /* ============================================================
        RESPONSIVE — 1024px (tablets landscape / small laptops)
     ============================================================ */
     @media (max-width: 1024px) {
+
       .container,
-      .container-wide { padding: 0 24px; }
+      .container-wide {
+        padding: 0 24px;
+      }
 
       /* Nav */
-      .nav-inner { height: 64px; }
+      .nav-inner {
+        height: 64px;
+      }
 
       /* Hero */
-      .hero { padding: 80px 0 60px; }
-      .hero-two-col { gap: 36px; }
+      .hero {
+        padding: 80px 0 60px;
+      }
+
+      .hero-two-col {
+        gap: 36px;
+      }
 
       /* Case studies */
-      .cs-grid { grid-template-columns: 1fr; }
+      .cs-grid {
+        grid-template-columns: 1fr;
+      }
 
       /* Scale / how we work */
-      .scale-inner { grid-template-columns: 1fr; gap: 48px; }
+      .scale-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
 
       /* Contact */
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
 
       /* Footer */
-      .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
-      .footer-brand { grid-column: 1 / -1; }
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
 
       /* Testimonials */
-      .testi-card { min-width: calc(50% - 12px); }
+      .testi-card {
+        min-width: calc(50% - 12px);
+      }
 
       /* Process */
-      .process-steps { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
-      .process-steps::before { display: none; }
+      .process-steps {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .process-steps::before {
+        display: none;
+      }
 
       /* Industries */
-      .industry-grid { grid-template-columns: repeat(4, 1fr); }
+      .industry-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
       /* Tech stack */
-      .ts-tools { gap: 10px; }
-      .ts-tool { padding: 9px 13px; }
+      .ts-tools {
+        gap: 10px;
+      }
+
+      .ts-tool {
+        padding: 9px 13px;
+      }
     }
 
     /* ============================================================
@@ -2482,161 +2531,498 @@
         gap: 40px;
         text-align: center;
       }
-      .hero-left { text-align: center; }
-      .hero-left .hero-eyebrow { justify-content: center; }
-      .hero-left .hero-cta-group { justify-content: center; }
-      .hero-left .hero-stats { justify-content: center; }
-      .hero-left .h-stat { padding: 20px 16px; }
-      .hero-right { max-width: 560px; margin: 0 auto; width: 100%; }
+
+      .hero-left {
+        text-align: center;
+      }
+
+      .hero-left .hero-eyebrow {
+        justify-content: center;
+      }
+
+      .hero-left .hero-cta-group {
+        justify-content: center;
+      }
+
+      .hero-left .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-left .h-stat {
+        padding: 20px 16px;
+      }
+
+      .hero-right {
+        max-width: 560px;
+        margin: 0 auto;
+        width: 100%;
+      }
     }
 
     /* ============================================================
        RESPONSIVE — 768px (tablets portrait / large phones)
     ============================================================ */
     @media (max-width: 768px) {
+
       /* Container */
       .container,
-      .container-wide { padding: 0 18px; }
+      .container-wide {
+        padding: 0 18px;
+      }
 
       /* Announcement bar */
-      .top-bar { font-size: 12px; padding: 8px 16px; }
+      .top-bar {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
 
       /* Nav */
       .nav-links,
-      .nav-actions .btn { display: none; }
-      .hamburger { display: flex; }
-      .nav-inner { height: 60px; }
-      .nav-logo { padding: 4px 10px 4px 4px; gap: 10px; }
-      .nav-logo .logo-img-wrap { width: 38px; height: 38px; }
-      .nav-logo .logo-text-main { font-size: 1.05rem; }
-      .nav-logo .logo-text-sub { font-size: 0.48rem; }
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-inner {
+        height: 60px;
+      }
+
+      .nav-logo {
+        padding: 4px 10px 4px 4px;
+        gap: 10px;
+      }
+
+      .nav-logo .logo-img-wrap {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-logo .logo-text-main {
+        font-size: 1.05rem;
+      }
+
+      .nav-logo .logo-text-sub {
+        font-size: 0.48rem;
+      }
 
       /* Hero */
-      .hero { padding: 60px 0 48px; }
-      .hero-two-col { gap: 32px; }
-      .hero-left .hero-stats { flex-wrap: wrap; gap: 0; border-radius: 14px; overflow: hidden; }
-      .hero-left .h-stat { flex: 0 0 50%; border-top: 1px solid var(--border-soft); }
-      .hero-left .h-stat:first-child { border-top: none; }
-      .hero-left .h-stat:nth-child(2) { border-top: none; border-left: 1px solid var(--border-soft); }
-      .hero-left .h-stat + .h-stat { border-left: none; padding-left: 0; }
+      .hero {
+        padding: 60px 0 48px;
+        min-height: auto;
+      }
+
+      .hero-two-col {
+        gap: 32px;
+      }
+
+      /* Shrink glows so they don't cause overflow */
+      .hero-glow-1 {
+        width: 280px;
+        height: 280px;
+        top: -60px;
+        left: -60px;
+      }
+
+      .hero-glow-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -30px;
+        right: 20px;
+      }
+
+      /* Stats: 2x2 grid on mobile */
+      .hero-left .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--surface);
+        border: 1px solid var(--border-soft);
+      }
+
+      .hero-left .h-stat {
+        flex: unset;
+        border-top: 1px solid var(--border-soft);
+        padding: 18px 12px;
+        text-align: center;
+      }
+
+      .hero-left .h-stat:first-child {
+        border-top: none;
+      }
+
+      .hero-left .h-stat:nth-child(2) {
+        border-top: none;
+        border-left: 1px solid var(--border-soft);
+      }
+
+      .hero-left .h-stat:nth-child(3) {
+        border-left: 1px solid var(--border-soft);
+        grid-column: 1 / -1;
+      }
+
+      .hero-left .h-stat + .h-stat {
+        border-left: none;
+        padding-left: 12px;
+      }
 
       /* Services */
-      .services { padding: 70px 0; }
-      .service-item { padding: 24px 22px; gap: 16px; }
-      .service-num { font-size: 40px; }
-      .service-body { gap: 6px; }
+      .services {
+        padding: 70px 0;
+      }
+
+      .service-item {
+        padding: 24px 22px;
+        gap: 16px;
+      }
+
+      .service-num {
+        font-size: 40px;
+      }
+
+      .service-body {
+        gap: 6px;
+      }
 
       /* Tech stack */
-      .techstack { padding: 60px 0 70px; }
-      .techstack-cats { gap: 20px; }
-      .ts-cat { padding: 20px 16px; }
-      .ts-cat-header { gap: 10px; margin-bottom: 18px; }
-      .ts-cat-icon { width: 34px; height: 34px; font-size: 16px; }
-      .ts-cat-title { font-size: 15px; }
-      .ts-tools { gap: 8px; }
-      .ts-tool { padding: 8px 11px; gap: 7px; }
-      .ts-tool img { height: 22px; }
-      .ts-tool-name { font-size: 12px; }
+      .techstack {
+        padding: 60px 0 70px;
+      }
+
+      .techstack-cats {
+        gap: 20px;
+      }
+
+      .ts-cat {
+        padding: 20px 16px;
+      }
+
+      .ts-cat-header {
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .ts-cat-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+      }
+
+      .ts-cat-title {
+        font-size: 15px;
+      }
+
+      .ts-tools {
+        gap: 8px;
+      }
+
+      .ts-tool {
+        padding: 8px 11px;
+        gap: 7px;
+      }
+
+      .ts-tool img {
+        height: 22px;
+      }
+
+      .ts-tool-name {
+        font-size: 12px;
+      }
 
       /* Countries */
-      .countries { padding: 60px 0; }
+      .countries {
+        padding: 60px 0;
+      }
 
       /* Case studies */
-      .case-studies { padding: 70px 0; }
+      .case-studies {
+        padding: 70px 0;
+      }
+
       .cs-card-top,
-      .cs-stack { padding: 24px 20px; }
+      .cs-stack {
+        padding: 24px 20px;
+      }
 
       /* Scale section */
-      .scale { padding: 70px 0; }
-      .scale-card-badges { flex-wrap: wrap; gap: 10px; }
-      .scale-badge { flex: 1 1 calc(50% - 10px); min-width: 120px; }
+      .scale {
+        padding: 70px 0;
+      }
+
+      .scale-card-badges {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .scale-badge {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 120px;
+      }
 
       /* Process */
-      .process { padding: 70px 0; }
-      .process-step { padding: 24px 20px; }
+      .process {
+        padding: 70px 0;
+      }
+
+      .process-step {
+        padding: 24px 20px;
+      }
 
       /* Industries */
-      .industries { padding: 60px 0; }
-      .industry-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .industry-card { padding: 18px 14px; }
+      .industries {
+        padding: 60px 0;
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .industry-card {
+        padding: 18px 14px;
+      }
 
       /* Testimonials */
-      .testimonials { padding: 70px 0; }
-      .testi-card { min-width: 100%; }
+      .testimonials {
+        padding: 70px 0;
+      }
+
+      .testi-card {
+        min-width: 100%;
+      }
 
       /* Contact */
-      .contact { padding: 70px 0; }
-      .contact-form-wrap { padding: 28px 20px; }
-      .form-grid { grid-template-columns: 1fr; }
-      .tcp-grid { grid-template-columns: 1fr; gap: 16px; }
+      .contact {
+        padding: 70px 0;
+      }
+
+      .contact-form-wrap {
+        padding: 28px 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tcp-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
 
       /* Footer */
-      .footer-main { grid-template-columns: 1fr; gap: 32px; }
-      .footer-addresses { flex-direction: column; gap: 20px; }
-      .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
-      .footer-bottom div { justify-content: center; }
-      .newsletter-form { flex-direction: column; }
-      .newsletter-form input { width: 100%; }
-      .social-links { justify-content: flex-start; }
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-addresses {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .footer-bottom div {
+        justify-content: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+      }
+
+      .social-links {
+        justify-content: flex-start;
+      }
 
       /* Section labels + headings */
-      .section-label { font-size: 11px; }
+      .section-label {
+        font-size: 11px;
+      }
+
       .services-header h2,
       .techstack-header h2,
-      .contact h2 { font-size: clamp(24px, 5vw, 34px); }
+      .contact h2 {
+        font-size: clamp(24px, 5vw, 34px);
+      }
     }
 
     /* ============================================================
        RESPONSIVE — 480px (phones)
     ============================================================ */
     @media (max-width: 480px) {
+
       .container,
-      .container-wide { padding: 0 14px; }
+      .container-wide {
+        padding: 0 14px;
+      }
 
       /* Hero */
-      .hero { padding: 50px 0 40px; }
-      .hero-left h1 { font-size: clamp(30px, 9vw, 42px); }
-      .hero-cta-group { flex-direction: column; gap: 10px; width: 100%; }
-      .hero-cta-group .btn { width: 100%; text-align: center; justify-content: center; }
-      .hero-left .hero-stats { flex-direction: column; }
-      .hero-left .h-stat { flex: 1 1 100%; border-left: none !important; border-top: 1px solid var(--border-soft) !important; }
-      .hero-left .h-stat:first-child { border-top: none !important; }
+      .hero {
+        padding: 50px 0 40px;
+        min-height: auto;
+      }
+
+      .hero-left h1 {
+        font-size: clamp(28px, 8vw, 38px);
+      }
+
+      .hero-glow-1 {
+        width: 200px;
+        height: 200px;
+        top: -40px;
+        left: -40px;
+      }
+
+      .hero-glow-2 {
+        width: 150px;
+        height: 150px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 14px 20px;
+      }
+
+      /* Stats keep 2x2 grid on small phones too */
+      .hero-left .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-left .h-stat {
+        padding: 14px 8px;
+      }
+
+      .h-stat-val {
+        font-size: clamp(22px, 6vw, 32px);
+      }
+
+      .h-stat-label {
+        font-size: 11px;
+      }
 
       /* Nav logo even more compact */
-      .nav-logo .logo-text-sub { display: none; }
-      .nav-logo .logo-img-wrap { width: 34px; height: 34px; }
-      .nav-logo .logo-text-main { font-size: 0.95rem; }
+      .nav-logo .logo-text-sub {
+        display: none;
+      }
+
+      .nav-logo .logo-img-wrap {
+        width: 34px;
+        height: 34px;
+      }
+
+      .nav-logo .logo-text-main {
+        font-size: 0.95rem;
+      }
 
       /* Services */
-      .service-item { padding: 20px 16px; flex-wrap: wrap; }
-      .service-num { font-size: 32px; }
+      .service-item {
+        padding: 20px 16px;
+        flex-wrap: wrap;
+      }
+
+      .service-num {
+        font-size: 32px;
+      }
 
       /* Tech stack */
-      .ts-tool { padding: 7px 10px; }
-      .ts-tool img { height: 20px; }
-      .ts-tool-name { font-size: 11px; }
+      .ts-tool {
+        padding: 7px 10px;
+      }
+
+      .ts-tool img {
+        height: 20px;
+      }
+
+      .ts-tool-name {
+        font-size: 11px;
+      }
 
       /* Scale badges */
-      .scale-badge { flex: 1 1 100%; }
+      .scale-badge {
+        flex: 1 1 100%;
+      }
 
       /* Case studies */
       .cs-card-top,
-      .cs-stack { padding: 20px 16px; }
+      .cs-stack {
+        padding: 20px 16px;
+      }
 
       /* Industries */
-      .industry-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      .industry-card { padding: 14px 10px; font-size: 13px; }
+      .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .industry-card {
+        padding: 14px 10px;
+        font-size: 13px;
+      }
 
       /* Testimonials */
-      .testi-card { padding: 24px 20px; }
+      .testi-card {
+        padding: 24px 20px;
+      }
 
       /* Contact */
-      .contact-form-wrap { padding: 22px 16px; }
-      .contact-details { padding: 22px 16px; }
+      .contact-form-wrap {
+        padding: 22px 16px;
+      }
+
+      .contact-details {
+        padding: 22px 16px;
+      }
 
       /* Footer */
-      .footer-main { gap: 28px; }
-      .footer-nav h6 { margin-bottom: 12px; }
+      .footer-main {
+        gap: 28px;
+      }
+
+      .footer-nav h6 {
+        margin-bottom: 12px;
+      }
+
+      /* Countries marquee — prevent any overflow */
+      .countries {
+        overflow: hidden;
+      }
+
+      .countries-marquee-wrap {
+        overflow: hidden;
+        max-width: 100vw;
+      }
+
+      /* Video card — allow natural height on mobile */
+      .hero-video-inner {
+        aspect-ratio: 16/10;
+      }
+
+      /* Section headings shrink */
+      .services-header h2,
+      .techstack-header h2,
+      .countries-header h2 {
+        font-size: clamp(22px, 6vw, 30px);
+      }
 
       /* Sections spacing */
       .services,
@@ -2646,19 +3032,54 @@
       .process,
       .industries,
       .testimonials,
-      .contact { padding: 56px 0; }
+      .contact {
+        padding: 48px 0;
+      }
     }
 
     /* ============================================================
        RESPONSIVE — 360px (small phones)
     ============================================================ */
     @media (max-width: 360px) {
-      .nav-logo .logo-text-main { font-size: 0.85rem; }
-      .ts-tools { gap: 6px; }
-      .ts-tool { padding: 6px 8px; }
-      .ts-tool img { height: 18px; }
-      .ts-tool-name { font-size: 10px; }
-      .industry-grid { grid-template-columns: 1fr 1fr; }
+      .nav-logo .logo-text-main {
+        font-size: 0.85rem;
+      }
+
+      .ts-tools {
+        gap: 6px;
+      }
+
+      .ts-tool {
+        padding: 6px 8px;
+      }
+
+      .ts-tool img {
+        height: 18px;
+      }
+
+      .ts-tool-name {
+        font-size: 10px;
+      }
+
+      .industry-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-glow-1 {
+        width: 160px;
+        height: 160px;
+        top: -30px;
+        left: -30px;
+      }
+
+      .hero-glow-2 {
+        width: 120px;
+        height: 120px;
+      }
+
+      .hero-left h1 {
+        font-size: clamp(26px, 7vw, 34px);
+      }
     }
   </style>
 </head>
