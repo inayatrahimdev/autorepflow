@@ -96,6 +96,12 @@
       padding: 0;
     }
 
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
       font-size: 16px;
@@ -1639,6 +1645,7 @@
     .scale-section {
       padding: 100px 0;
       background: var(--surface);
+      overflow: hidden;
     }
 
     .scale-inner {
@@ -1646,6 +1653,9 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .scale-text h2 {
@@ -1673,6 +1683,8 @@
       background: var(--card);
       border: 1px solid var(--border-soft);
       border-radius: 12px;
+      box-sizing: border-box;
+      width: 100%;
       transition: border-color 0.2s;
     }
 
@@ -1713,6 +1725,8 @@
       border-radius: var(--radius-lg);
       padding: 36px 32px;
       margin-bottom: 16px;
+      box-sizing: border-box;
+      width: 100%;
     }
 
     .scale-card-main h3 {
@@ -1729,15 +1743,19 @@
       display: flex;
       gap: 16px;
       margin-top: 24px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .stat-mini {
       flex: 1;
+      min-width: 0;
       background: rgba(0, 87, 255, 0.07);
       border: 1px solid rgba(0, 87, 255, 0.15);
       border-radius: 10px;
       padding: 16px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     .stat-mini .val {
@@ -1758,16 +1776,20 @@
     .scale-card-badges {
       display: flex;
       gap: 12px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .scale-badge {
       flex: 1;
+      min-width: 0;
       background: var(--card);
       border: 1px solid var(--border-soft);
       border-radius: 12px;
       padding: 16px;
       text-align: center;
       font-size: 13px;
+      box-sizing: border-box;
       font-weight: 600;
       color: var(--heading);
     }
@@ -2472,7 +2494,17 @@
       /* Scale / how we work */
       .scale-inner {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .scale-section {
+        padding: 70px 0;
+      }
+
+      .scale-card-main {
+        padding: 28px 24px;
       }
 
       /* Contact */
@@ -2665,7 +2697,7 @@
         grid-column: 1 / -1;
       }
 
-      .hero-left .h-stat + .h-stat {
+      .hero-left .h-stat+.h-stat {
         border-left: none;
         padding-left: 12px;
       }
@@ -2754,13 +2786,33 @@
       }
 
       .scale-card-badges {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
+        width: 100%;
       }
 
       .scale-badge {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 120px;
+        flex: unset;
+        width: 100%;
+        min-width: 0;
+        padding: 14px 10px;
+      }
+
+      .stat-row {
+        gap: 10px;
+      }
+
+      .stat-mini {
+        padding: 12px 8px;
+      }
+
+      .stat-mini .val {
+        font-size: 20px;
+      }
+
+      .stat-mini .lbl {
+        font-size: 11px;
       }
 
       /* Process */
@@ -2957,9 +3009,68 @@
         font-size: 11px;
       }
 
-      /* Scale badges */
+      /* Scale section */
+      .scale-section {
+        padding: 56px 0;
+      }
+
+      .scale-inner {
+        gap: 32px;
+      }
+
+      .scale-card-main {
+        padding: 22px 18px;
+      }
+
+      .scale-card-badges {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
       .scale-badge {
-        flex: 1 1 100%;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+      }
+
+      .scale-badge img,
+      .scale-badge .sb-icon {
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .scale-badge .sb-lbl {
+        margin-top: 0;
+      }
+
+      .stat-row {
+        gap: 8px;
+      }
+
+      .stat-mini {
+        padding: 10px 6px;
+      }
+
+      .stat-mini .val {
+        font-size: 18px;
+      }
+
+      .stat-mini .lbl {
+        font-size: 10px;
+      }
+
+      .scale-point {
+        padding: 14px 16px;
+        gap: 12px;
+      }
+
+      .scale-point .sp-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        flex-shrink: 0;
       }
 
       /* Case studies */
