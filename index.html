@@ -822,13 +822,13 @@
 
     /* Country flag images */
     .country-flag-img {
-      width: 32px;
-      height: 22px;
+      width: 36px;
+      height: 26px;
       object-fit: cover;
       border-radius: 4px;
       flex-shrink: 0;
       display: block;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
     }
 
     /* Responsive hero two-col */
@@ -1275,7 +1275,7 @@
 
     .countries-marquee-wrap {
       overflow: hidden;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .countries-track {
@@ -1774,36 +1774,75 @@
     }
 
     .scale-card-badges {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       width: 100%;
       box-sizing: border-box;
     }
 
     .scale-badge {
-      flex: 1;
-      min-width: 0;
       background: var(--card);
       border: 1px solid var(--border-soft);
       border-radius: 12px;
-      padding: 16px;
+      padding: 18px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       text-align: center;
-      font-size: 13px;
       box-sizing: border-box;
-      font-weight: 600;
-      color: var(--heading);
+      transition: border-color 0.2s;
     }
 
-    .scale-badge .sb-icon {
-      font-size: 22px;
-      margin-bottom: 6px;
+    .scale-badge:hover {
+      border-color: rgba(0, 87, 255, 0.3);
+    }
+
+    .sb-flag-wrap {
+      width: 48px;
+      height: 34px;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .sb-flag-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sb-flag-globe {
+      background: rgba(0, 87, 255, 0.1);
+      border: 1px solid rgba(0, 87, 255, 0.2);
+      font-size: 20px;
+    }
+
+    .sb-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .sb-country {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1;
     }
 
     .scale-badge .sb-lbl {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
-      margin-top: 4px;
       font-weight: 400;
+      line-height: 1.3;
     }
 
     /* ============================================================
@@ -2786,17 +2825,18 @@
       }
 
       .scale-card-badges {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        width: 100%;
       }
 
       .scale-badge {
-        flex: unset;
-        width: 100%;
-        min-width: 0;
         padding: 14px 10px;
+        gap: 8px;
+      }
+
+      .sb-flag-wrap {
+        width: 40px;
+        height: 28px;
       }
 
       .stat-row {
@@ -3028,21 +3068,21 @@
       }
 
       .scale-badge {
+        flex-direction: row;
         padding: 14px 16px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
         text-align: left;
+        gap: 14px;
+        align-items: center;
       }
 
-      .scale-badge img,
-      .scale-badge .sb-icon {
-        margin: 0;
+      .sb-info {
+        align-items: flex-start;
+      }
+
+      .sb-flag-wrap {
+        width: 44px;
+        height: 30px;
         flex-shrink: 0;
-      }
-
-      .scale-badge .sb-lbl {
-        margin-top: 0;
       }
 
       .stat-row {
@@ -3113,14 +3153,38 @@
         margin-bottom: 12px;
       }
 
-      /* Countries marquee — prevent any overflow */
+      /* Countries section */
       .countries {
         overflow: hidden;
+        padding: 56px 0;
+      }
+
+      .countries-header {
+        margin-bottom: 32px;
+      }
+
+      .countries-header p {
+        display: none;
       }
 
       .countries-marquee-wrap {
         overflow: hidden;
         max-width: 100vw;
+        margin-bottom: 16px;
+      }
+
+      .country-pill {
+        padding: 8px 14px;
+        gap: 8px;
+      }
+
+      .country-flag-img {
+        width: 28px;
+        height: 20px;
+      }
+
+      .country-name {
+        font-size: 13px;
       }
 
       /* Video card — allow natural height on mobile */
@@ -3698,7 +3762,7 @@
       </div>
     </div>
 
-    <div class="countries-marquee-wrap" style="margin-top:12px;" aria-hidden="true">
+    <div class="countries-marquee-wrap" style="margin-top:20px;" aria-hidden="true">
       <div class="countries-track-r">
         <div class="country-pill"><img src="br.png" alt="Brazil" class="country-flag-img"><span
             class="country-name">Brazil</span></div>
@@ -3932,20 +3996,29 @@
           </div>
           <div class="scale-card-badges">
             <div class="scale-badge">
-              <img src="usa.png" alt="USA"
-                style="width:40px;height:28px;object-fit:cover;border-radius:4px;margin:0 auto 6px;">
-              <div style="font-size:13px;font-weight:700;">USA</div>
+              <div class="sb-flag-wrap">
+                <img src="usa.png" alt="USA flag" class="sb-flag-img">
+              </div>
+              <div class="sb-info">
+                <div class="sb-country">USA</div>
+                <div class="sb-lbl">Office: Pinedale, WY</div>
+              </div>
             </div>
             <div class="scale-badge">
-              <img src="pak.jpg" alt="Pakistan"
-                style="width:40px;height:28px;object-fit:cover;border-radius:4px;margin:0 auto 6px;">
-              <div style="font-size:13px;font-weight:700;">Pakistan</div>
-              <div class="sb-lbl">Office: DHA, Islamabad</div>
+              <div class="sb-flag-wrap">
+                <img src="pak.jpg" alt="Pakistan flag" class="sb-flag-img">
+              </div>
+              <div class="sb-info">
+                <div class="sb-country">Pakistan</div>
+                <div class="sb-lbl">Office: DHA, Islamabad</div>
+              </div>
             </div>
             <div class="scale-badge">
-              <div class="sb-icon">🌐</div>
-              <div style="font-size:13px;font-weight:700;">Remote</div>
-              <div class="sb-lbl">Global Team</div>
+              <div class="sb-flag-wrap sb-flag-globe">🌐</div>
+              <div class="sb-info">
+                <div class="sb-country">Remote</div>
+                <div class="sb-lbl">Global Team</div>
+              </div>
             </div>
           </div>
         </div>
